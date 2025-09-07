@@ -3,152 +3,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serrurier d’Urgence Besançon – Lock Picker</title>
-  <meta name="description" content="Serrurier urgence à Besançon – Déblocage de portes, serrures et cadenas. Intervention rapide en 30 minutes. Contactez Lock Picker au 06 98 98 95 53 !" />
+  <title>Lock Picker - Ouverture de Portes Besançon | Intervention 24h/24</title>
+  <meta name="description" content="🔓 Spécialiste ouverture de portes à Besançon. Porte claquée ? Serrure bloquée ? Intervention rapide sans dégâts. ☎️ 06 98 98 95 53" />
+  
+
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f172a;
-      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f1f5f9;
       scroll-behavior: smooth;
     }
-    .card {
-      background: #1e293b;
-      border-radius: 0.75rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    .glass {
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+
+    .card-hover {
+      transition: all 0.3s ease;
     }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s forwards;
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
   </style>
 </head>
+
 <body class="min-h-screen">
   <!-- Navigation -->
-  <nav class="sticky top-0 bg-[#1e293b] shadow-md z-10">
+  <nav class="fixed top-0 w-full z-50 glass">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <h1 class="text-2xl font-bold text-blue-400">🔑 Lock Picker</h1>
-        <div class="space-x-6">
-          <a href="#services" class="text-gray-300 hover:text-blue-400">Services</a>
-          <a href="#why" class="text-gray-300 hover:text-blue-400">Pourquoi nous ?</a>
-          <a href="#contact" class="text-gray-300 hover:text-blue-400">Contact</a>
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center">
+            <span class="text-gray-900 font-bold">🔓</span>
+          </div>
+          <h1 class="text-2xl font-bold text-yellow-400">Lock Picker</h1>
         </div>
+        
+        <div class="hidden md:flex space-x-6">
+          <a href="#services" class="text-gray-300 hover:text-yellow-400">Services</a>
+          <a href="#process" class="text-gray-300 hover:text-yellow-400">Comment ça marche</a>
+          <a href="#contact" class="text-gray-300 hover:text-yellow-400">Contact</a>
+        </div>
+
+        <a href="tel:0698989553" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition">
+          📞 Appeler
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="relative h-[550px] flex items-center justify-center">
-    <img src="https://w0.peakpx.com/wallpaper/133/6/HD-wallpaper-lock-pick-set-pick-tool-set-lock.jpg" 
-         alt="Fond serrurerie" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-[#0f172a]/40 to-transparent"></div>
-    <div class="relative z-10 text-center px-6 fade-in">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Serrurier d’Urgence à Besançon</h2>
-      <p class="text-lg md:text-xl mb-6 text-gray-200">Porte bloquée ? Clé perdue ? Intervention garantie en moins de 30 minutes.</p>
-      <a href="tel:0698989553" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition">📞 06 98 98 95 53</a>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20 bg-[#0f172a]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-blue-400 mb-12 fade-in">Nos Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="card p-6 text-center fade-in">
-          <img src="https://t4.ftcdn.net/jpg/01/66/39/05/360_F_166390510_aighrJsm9rOE5s3kL8GiAtFwpiXW2cZS.jpg" alt="Ouverture de porte" class="w-full h-44 object-cover rounded mb-4">
-          <h3 class="text-xl font-semibold mb-3 text-white">🚪 Ouverture de porte</h3>
-          <p class="text-gray-300">Déblocage rapide de portes claquées ou verrouillées, sans dégâts inutiles.</p>
-        </div>
-      <div class="card p-6 text-center fade-in">
-        <img src="https://media.istockphoto.com/id/622216354/photo/lockpicker-fixing-door-handle-at-home.jpg?s=612x612&w=0&k=20&c=52azNUr7Mm3PSe2QJP62efGPxTDoIh9BCgPfuoBCIZg=" 
-            alt="Serrures et verrous" 
-            class="w-full h-44 object-cover rounded mb-4">
-        <h3 class="text-xl font-semibold mb-3 text-white">🔒 Serrures & verrous</h3>
-        <p class="text-gray-300">Réparation ou installation de serrures sécurisées.</p>
-      </div>
-        <div class="card p-6 text-center fade-in">
-          <img src="https://media.istockphoto.com/id/848304240/photo/an-lock-pick.jpg?s=612x612&w=0&k=20&c=3E1AQb75WCHBm2-_UR7h26veQZ52NqZ0o6Y-R54190Q=" alt="Cadenas bloqués" class="w-full h-44 object-cover rounded mb-4">
-          <h3 class="text-xl font-semibold mb-3 text-white">⛓️ Cadenas bloqués</h3>
-          <p class="text-gray-300">Ouverture professionnelle de cadenas, antivols et coffres coincés.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Pourquoi nous -->
-  <section id="why" class="py-20 bg-[#1e293b]">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
-      <div class="fade-in">
-        <h2 class="text-3xl font-bold text-blue-400 mb-6">Pourquoi choisir Lock Picker ?</h2>
-        <ul class="space-y-4 text-lg text-gray-300">
-          <li>⚡ <strong class="text-white">Rapidité</strong> : Intervention en moins de 30 minutes à Besançon.</li>
-          <li>💰 <strong class="text-white">Transparence</strong> : Prix justes et annoncés à l’avance.</li>
-          <li>📍 <strong class="text-white">Proximité</strong> : Disponible 24/7 dans tout Besançon et alentours.</li>
-        </ul>
-      </div>
-      <img src="https://t4.ftcdn.net/jpg/05/66/23/51/360_F_566235195_nhDDuQpommcxK9SBtY2gq5IxvsJxCIdE.jpg" alt="Serrurier au travail" class="rounded-xl shadow-lg fade-in">
-    </div>
-  </section>
-
-  <!-- Abonnement Protection -->
-  <section id="subscription" class="py-20 bg-[#0f172a]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold text-blue-400 mb-6">🔐 Abonnement Protection</h2>
-      <p class="text-lg text-gray-300 mb-12">Protégez votre foyer et soyez tranquille 24/7 – Intervention prioritaire en cas de problème.</p>
+  <!-- Hero Section -->
+  <section class="pt-20 pb-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">
+        <span class="text-yellow-400">Ouverture de Portes</span>
+        <br>
+        <span class="text-white">à Besançon</span>
+      </h2>
       
-      <div class="bg-gradient-to-b from-blue-600 to-blue-800 p-1 rounded-2xl shadow-2xl inline-block transform hover:scale-105 transition">
-        <div class="bg-[#1e293b] p-10 rounded-2xl text-center max-w-md">
-          <h3 class="text-2xl font-bold text-white mb-2">Protection Totale</h3>
-          <p class="text-blue-300 text-3xl font-extrabold mb-6">20 € <span class="text-lg font-normal">/ mois</span></p>
-          
-          <ul class="text-gray-300 space-y-3 mb-8 text-left">
-            <li>✅ Intervention prioritaire 24/7</li>
-            <li>✅ Déblocage d’urgence inclus</li>
-            <li>✅ Assistance téléphonique immédiate</li>
-          </ul>
-          
-          <!-- Bouton PayPal -->
-          <a href="https://www.paypal.com/paypalme/eizekiels" target="_blank" 
-            class="block w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg shadow-lg transition transform hover:translate-y-[-2px]">
-            💳 Souscrire via PayPal
-          </a>
-          
-          <p class="mt-6 text-gray-400 italic">Votre sécurité, notre priorité.</p>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8">
+        🚪 Porte claquée ? Serrure bloquée ? Clé perdue ?
+        <br>
+        <strong class="text-green-400">Intervention rapide sans casser votre serrure</strong>
+      </p>
+
+      <!-- Emergency CTA -->
+      <div class="mb-12">
+        <a href="tel:0698989553" class="pulse-btn inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-xl">
+          🚨 URGENCE - 06 98 98 95 53
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+        <div class="glass p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-green-400">< 30min</div>
+          <div class="text-sm text-gray-400">Intervention</div>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-yellow-400">24/7</div>
+          <div class="text-sm text-gray-400">Disponible</div>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-blue-400">0%</div>
+          <div class="text-sm text-gray-400">Dégâts</div>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <div class="text-2xl font-bold text-purple-400">Expert</div>
+          <div class="text-sm text-gray-400">Crochetage</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Mon Expertise</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🚪</div>
+          <h3 class="text-xl font-bold text-white mb-3">Porte Claquée</h3>
+          <p class="text-gray-300">Ouverture rapide sans endommager votre serrure. Technique de crochetage professionnel.</p>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-[#0f172a]">
-    <div class="max-w-4xl mx-auto text-center px-4 fade-in">
-      <h2 class="text-3xl font-bold text-blue-400 mb-6">Contactez-moi</h2>
-      <p class="mb-4 text-lg text-gray-300">Disponible 24h/24 et 7j/7 à Besançon et alentours. Intervention garantie en moins de 30 minutes.</p>
-      <p class="mb-2 text-xl">📞 <a href="tel:0698989553" class="text-blue-400 font-semibold">06 98 98 95 53</a></p>
-      <p class="text-xl">📧 <a href="mailto:mguyout@gmail.com" class="text-blue-400 font-semibold">mguyout@gmail.com</a></p>
+        <!-- Service 2 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🔐</div>
+          <h3 class="text-xl font-bold text-white mb-3">Serrure Bloquée</h3>
+          <p class="text-gray-300">Déblocage de serrures grippées ou défectueuses. Manipulation experte sans destruction.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🗝️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Clé Perdue</h3>
+          <p class="text-gray-300">Accès retrouvé même sans clé. Techniques avancées de lock picking.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🔓</div>
+          <h3 class="text-xl font-bold text-white mb-3">Cadenas</h3>
+          <p class="text-gray-300">Ouverture de cadenas, antivols vélo, boîtes aux lettres bloquées.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🏢</div>
+          <h3 class="text-xl font-bold text-white mb-3">Bureaux</h3>
+          <p class="text-gray-300">Intervention sur site professionnel. Discrétion et efficacité garanties.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="glass p-6 rounded-xl card-hover">
+          <div class="text-4xl mb-4">🚗</div>
+          <h3 class="text-xl font-bold text-white mb-3">Véhicules</h3>
+          <p class="text-gray-300">Ouverture de portières de voiture. Clés oubliées à l'intérieur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-16 px-4 bg-slate-800/50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Comment ça marche ?</h2>
+      
+      <div class="space-y-8">
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">📞 Vous m'appelez</h3>
+            <p class="text-gray-300">Décrivez votre situation. Je vous donne une estimation immédiate.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">🚗 J'arrive chez vous</h3>
+            <p class="text-gray-300">Intervention rapide avec tout le matériel nécessaire.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">🔓 Ouverture experte</h3>
+            <p class="text-gray-300">Crochetage professionnel sans endommager votre serrure.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">4</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">✅ Mission accomplie</h3>
+            <p class="text-gray-300">Votre porte est ouverte, votre serrure fonctionne parfaitement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Me Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-8">Pourquoi faire appel à moi ?</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-white mb-3">🎯 Spécialiste Exclusif</h3>
+          <p class="text-gray-300">Je ne fais QUE de l'ouverture. C'est mon expertise, ma passion, ma spécialité.</p>
+        </div>
+
+        <div class="glass p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-white mb-3">🛡️ Sans Dégâts</h3>
+          <p class="text-gray-300">Techniques non-destructives. Votre serrure reste intacte et fonctionnelle.</p>
+        </div>
+
+        <div class="glass p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-white mb-3">⚡ Rapide</h3>
+          <p class="text-gray-300">Intervention d'urgence. J'arrive rapidement avec tous mes outils.</p>
+        </div>
+
+        <div class="glass p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-white mb-3">💰 Prix Honnête</h3>
+          <p class="text-gray-300">Tarif annoncé au téléphone. Pas de surprise, pas de frais cachés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-slate-800/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-8">Besoin d'aide ?</h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Disponible 24h/24 sur Besançon et alentours
+        <br>
+        Intervention rapide pour tous vos problèmes d'ouverture
+      </p>
+      
+      <div class="space-y-4">
+        <div>
+          <a href="tel:0698989553" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl text-2xl transition">
+            📞 06 98 98 95 53
+          </a>
+        </div>
+        
+        <div>
+          <a href="mailto:mguyout@gmail.com" class="text-yellow-400 hover:text-yellow-300 text-lg">
+            ✉️ mguyout@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm text-gray-400">
+        <p>🗺️ Zone d'intervention : Besançon et communes limitrophes</p>
+        <p>⏰ Disponible tous les jours, 24h/24</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#1e293b] text-gray-400 py-6 text-center">
-    <p>© 2025 Lock Picker – Serrurier d’Urgence à Besançon</p>
+  <footer class="bg-slate-900 text-gray-400 py-6 text-center">
+    <p>© 2025 Lock Picker - Spécialiste Ouverture de Portes à Besançon</p>
   </footer>
+
+  <script>
+    // Simple scroll animations
+    window.addEventListener('scroll', () => {
+      const cards = document.querySelectorAll('.card-hover');
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    // Initialize cards
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card-hover');
+      cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.5s ease';
+      });
+    });
+  </script>
 </body>
 </html>
