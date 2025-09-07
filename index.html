@@ -7,93 +7,117 @@
   <meta name="description" content="Serrurier urgence à Besançon – Déblocage de portes, serrures et cadenas. Intervention rapide en 30 minutes. Contactez Lock Picker au 06 98 98 95 53 !" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f3f4f6; /* gris clair moderne */
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
       scroll-behavior: smooth;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 0.75rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-<body class="min-h-screen text-gray-800">
+<body class="min-h-screen">
   <!-- Navigation -->
-  <nav class="sticky top-0 bg-white shadow-md z-10">
+  <nav class="sticky top-0 bg-[#1e293b] shadow-md z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
-        <h1 class="text-2xl font-bold text-blue-600">🔑 Lock Picker</h1>
-        <div class="space-x-4">
-          <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-          <a href="#why" class="text-gray-700 hover:text-blue-600">Pourquoi nous ?</a>
-          <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+        <h1 class="text-2xl font-bold text-blue-400">🔑 Lock Picker</h1>
+        <div class="space-x-6">
+          <a href="#services" class="text-gray-300 hover:text-blue-400">Services</a>
+          <a href="#why" class="text-gray-300 hover:text-blue-400">Pourquoi nous ?</a>
+          <a href="#contact" class="text-gray-300 hover:text-blue-400">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="relative h-[500px] bg-gray-900 flex items-center justify-center">
-    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80" 
-         alt="Serrurier urgence" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
-    <div class="relative z-10 text-center text-white px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Serrurier d’Urgence à Besançon</h2>
-      <p class="text-lg md:text-xl mb-6">Porte bloquée ? Clé perdue ? Intervention en moins de 30 minutes.</p>
-      <a href="tel:0698989553" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition">📞 06 98 98 95 53</a>
+  <section class="relative h-[550px] flex items-center justify-center">
+    <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=1600&q=80" 
+         alt="Fond serrurerie" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-[#0f172a]/40 to-transparent"></div>
+    <div class="relative z-10 text-center px-6 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Serrurier d’Urgence à Besançon</h2>
+      <p class="text-lg md:text-xl mb-6 text-gray-200">Porte bloquée ? Clé perdue ? Intervention garantie en moins de 30 minutes.</p>
+      <a href="tel:0698989553" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition">📞 06 98 98 95 53</a>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-white">
+  <section id="services" class="py-20 bg-[#0f172a]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-blue-600 mb-12">Nos Services</h2>
+      <h2 class="text-3xl font-bold text-center text-blue-400 mb-12 fade-in">Nos Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80" alt="Ouverture de porte" class="w-full h-48 object-cover rounded mb-4">
-          <h3 class="text-xl font-semibold mb-3">🚪 Ouverture de porte</h3>
-          <p>Déblocage rapide de portes claquées ou verrouillées sans dégâts inutiles.</p>
+        <div class="card p-6 text-center fade-in">
+          <img src="https://images.unsplash.com/photo-1614064784466-5c6a481f7f40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="Serrures et verrous" 
+              class="w-full h-44 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-3 text-white">🔒 Serrures & verrous</h3>
+          <p class="text-gray-300">Changement, réparation ou installation de serrures sécurisées.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1607706189992-eae57862676e?auto=format&fit=crop&w=800&q=80" alt="Serrures et verrous" class="w-full h-48 object-cover rounded mb-4">
-          <h3 class="text-xl font-semibold mb-3">🔒 Serrures & verrous</h3>
-          <p>Changement, réparation ou installation de serrures sécurisées.</p>
+        <div class="card p-6 text-center fade-in">
+          <img src="https://images.unsplash.com/photo-1588776814546-46bc7d7a15f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Serrures et verrous" class="w-full h-44 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-3 text-white">🔒 Serrures & verrous</h3>
+          <p class="text-gray-300">Changement, réparation ou installation de serrures sécurisées.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1590099543485-9d621b2d7efb?auto=format&fit=crop&w=800&q=80" alt="Cadenas bloqués" class="w-full h-48 object-cover rounded mb-4">
-          <h3 class="text-xl font-semibold mb-3">⛓️ Cadenas bloqués</h3>
-          <p>Ouverture professionnelle de cadenas, antivols et coffres coincés.</p>
+        <div class="card p-6 text-center fade-in">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cadenas bloqués" class="w-full h-44 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-3 text-white">⛓️ Cadenas bloqués</h3>
+          <p class="text-gray-300">Ouverture professionnelle de cadenas, antivols et coffres coincés.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pourquoi nous -->
-  <section id="why" class="py-20 bg-gray-100">
+  <section id="why" class="py-20 bg-[#1e293b]">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
-      <div>
-        <h2 class="text-3xl font-bold text-blue-600 mb-6">Pourquoi choisir Lock Picker ?</h2>
-        <ul class="space-y-4 text-lg">
-          <li>⚡ <strong>Rapidité</strong> : Intervention en moins de 30 minutes à Besançon.</li>
-          <li>🔑 <strong>Expertise</strong> : Plus de 10 ans d’expérience en serrurerie.</li>
-          <li>💰 <strong>Transparence</strong> : Prix justes et annoncés à l’avance.</li>
-          <li>📍 <strong>Proximité</strong> : Disponible 24/7 dans tout Besançon et alentours.</li>
+      <div class="fade-in">
+        <h2 class="text-3xl font-bold text-blue-400 mb-6">Pourquoi choisir Lock Picker ?</h2>
+        <ul class="space-y-4 text-lg text-gray-300">
+          <li>⚡ <strong class="text-white">Rapidité</strong> : Intervention en moins de 30 minutes à Besançon.</li>
+          <li>🔑 <strong class="text-white">Expertise</strong> : Plus de 10 ans d’expérience en serrurerie.</li>
+          <li>💰 <strong class="text-white">Transparence</strong> : Prix justes et annoncés à l’avance.</li>
+          <li>📍 <strong class="text-white">Proximité</strong> : Disponible 24/7 dans tout Besançon et alentours.</li>
         </ul>
       </div>
-      <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80" alt="Serrurier au travail" class="rounded-xl shadow-lg">
+      <img src="https://images.unsplash.com/photo-1614064643635-df73a4e6ae73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Serrurier au travail" class="rounded-xl shadow-lg fade-in">
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-3xl font-bold text-blue-600 mb-6">Contactez-moi</h2>
-      <p class="mb-4 text-lg">Disponible 24h/24 et 7j/7 à Besançon et alentours. Intervention garantie en moins de 30 minutes.</p>
-      <p class="mb-2 text-xl">📞 <a href="tel:0698989553" class="text-blue-600 font-semibold">06 98 98 95 53</a></p>
-      <p class="text-xl">📧 <a href="mailto:mguyout@gmail.com" class="text-blue-600 font-semibold">mguyout@gmail.com</a></p>
+  <section id="contact" class="py-20 bg-[#0f172a]">
+    <div class="max-w-4xl mx-auto text-center px-4 fade-in">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">Contactez-moi</h2>
+      <p class="mb-4 text-lg text-gray-300">Disponible 24h/24 et 7j/7 à Besançon et alentours. Intervention garantie en moins de 30 minutes.</p>
+      <p class="mb-2 text-xl">📞 <a href="tel:0698989553" class="text-blue-400 font-semibold">06 98 98 95 53</a></p>
+      <p class="text-xl">📧 <a href="mailto:mguyout@gmail.com" class="text-blue-400 font-semibold">mguyout@gmail.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+  <footer class="bg-[#1e293b] text-gray-400 py-6 text-center">
     <p>© 2025 Lock Picker – Serrurier d’Urgence à Besançon</p>
   </footer>
 </body>
