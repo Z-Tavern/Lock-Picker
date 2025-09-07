@@ -3,338 +3,478 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lock Picker - Ouverture de Portes Besançon | Intervention 24h/24</title>
-  <meta name="description" content="🔓 Spécialiste ouverture de portes à Besançon. Porte claquée ? Serrure bloquée ? Intervention rapide sans dégâts. ☎️ 06 98 98 95 53" />
+  <title>Lock Picker - Expert Crochetage Professionnel | Besançon 24h/24</title>
+  <meta name="description" content="Expert certifié en ouverture de serrures à Besançon. Crochetage professionnel sans dégâts. Intervention d'urgence 24h/24. ☎️ 06 98 98 95 53" />
   
-  <!-- Redirect removed - configure server-side redirect to /aide instead -->
-
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
+    :root {
+      --gold: #DAA520;
+      --gold-light: #F4E4A6;
+      --gold-dark: #B8860B;
+      --black: #000000;
+      --black-soft: #0D0D0D;
+      --gray-dark: #1A1A1A;
+      --gray-medium: #2A2A2A;
+      --gray-light: #404040;
+      --white: #FFFFFF;
+      --success: #22C55E;
+      --warning: #EF4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%);
-      color: #f5f5f5;
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 25%, var(--gray-dark) 100%);
+      color: var(--white);
+      line-height: 1.6;
       scroll-behavior: smooth;
-      position: relative;
+      font-weight: 400;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: -1;
+    .font-serif { 
+      font-family: 'Playfair Display', serif; 
     }
 
-    .glass {
-      background: rgba(40, 40, 40, 0.85);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    /* Premium Glass Effects */
+    .glass-luxury {
+      background: linear-gradient(135deg, 
+        rgba(218, 165, 32, 0.08) 0%, 
+        rgba(26, 26, 26, 0.95) 15%, 
+        rgba(26, 26, 26, 0.98) 85%, 
+        rgba(218, 165, 32, 0.08) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(218, 165, 32, 0.2);
+      box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(218, 165, 32, 0.1);
     }
 
-    .card-hover {
-      transition: all 0.3s ease;
+    .glass-premium {
+      background: linear-gradient(135deg, 
+        rgba(218, 165, 32, 0.15) 0%, 
+        rgba(13, 13, 13, 0.97) 20%, 
+        rgba(13, 13, 13, 0.97) 80%, 
+        rgba(218, 165, 32, 0.15) 100%);
+      backdrop-filter: blur(25px);
+      border: 2px solid rgba(218, 165, 32, 0.4);
+      box-shadow: 
+        0 25px 60px rgba(218, 165, 32, 0.15),
+        0 0 0 1px rgba(218, 165, 32, 0.1),
+        inset 0 2px 0 rgba(218, 165, 32, 0.2);
     }
 
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Professional Hover Effects */
+    .professional-hover {
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    .pulse-btn {
-      animation: pulse 2s infinite;
+    .professional-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(218, 165, 32, 0.3);
+      border-color: rgba(218, 165, 32, 0.4);
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+    /* Gold Accent Elements */
+    .gold-accent {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
     }
+
+    .gold-text {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Elegant Animations */
+    .elegant-pulse {
+      animation: elegantPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes elegantPulse {
+      0%, 100% { 
+        box-shadow: 0 0 30px rgba(218, 165, 32, 0.2);
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 0 50px rgba(218, 165, 32, 0.4);
+        transform: scale(1.01);
+      }
+    }
+
+    /* Professional Typography */
+    .professional-heading {
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    .professional-body {
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1.7;
+    }
+
+    /* Status Indicators */
+    .status-available {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: var(--success);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .professional-heading {
+        font-size: 2.5rem;
+      }
+      
+      .glass-premium {
+        margin: 1rem;
+        padding: 2rem;
+      }
+    }
+
+    /* Loading animation for professional feel */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up:nth-child(2) { animation-delay: 0.2s; }
+    .fade-up:nth-child(3) { animation-delay: 0.4s; }
+    .fade-up:nth-child(4) { animation-delay: 0.6s; }
   </style>
 </head>
 
-<body class="min-h-screen">
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 glass">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center">
-            <span class="text-gray-900 font-bold">🔓</span>
+<body>
+  <!-- Professional Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-luxury">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full gold-accent flex items-center justify-center">
+            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+            </svg>
           </div>
-          <h1 class="text-2xl font-bold text-yellow-400">Lock Picker</h1>
+          <div>
+            <h1 class="text-2xl font-serif font-bold gold-text">Lock Picker</h1>
+            <p class="text-xs text-gray-400 font-medium">Expert Certifié</p>
+          </div>
         </div>
         
-        <div class="hidden md:flex space-x-6">
-          <a href="#services" class="text-gray-300 hover:text-yellow-400">Services</a>
-          <a href="#process" class="text-gray-300 hover:text-yellow-400">Comment ça marche</a>
-          <a href="#contact" class="text-gray-300 hover:text-yellow-400">Contact</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#expertise" class="text-gray-300 hover:text-yellow-500 font-medium transition-colors duration-300">Expertise</a>
+          <a href="#services" class="text-gray-300 hover:text-yellow-500 font-medium transition-colors duration-300">Services</a>
+          <a href="#process" class="text-gray-300 hover:text-yellow-500 font-medium transition-colors duration-300">Processus</a>
+          <a href="#contact" class="text-gray-300 hover:text-yellow-500 font-medium transition-colors duration-300">Contact</a>
         </div>
 
-        <a href="tel:0698989553" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition">
-          📞 Appeler
-        </a>
+        <div class="flex items-center space-x-4">
+          <div class="status-available">
+            <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+            Disponible 24h/24
+          </div>
+          <a href="tel:0698989553" class="gold-accent text-black font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300">
+            Intervention
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="pt-20 pb-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-5xl md:text-6xl font-bold mb-6">
-        <span class="text-yellow-400">Ouverture de Portes</span>
-        <br>
-        <span class="text-white">à Besançon</span>
-      </h2>
-      
-      <p class="text-xl md:text-2xl text-gray-300 mb-8">
-        🚪 Porte claquée ? Serrure bloquée ? Clé perdue ?
-        <br>
-        <strong class="text-green-400">Intervention rapide sans casser votre serrure</strong>
-      </p>
-
-      <!-- Emergency CTA -->
-      <div class="mb-12">
-        <a href="tel:0698989553" class="pulse-btn inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-xl">
-          🚨 URGENCE - 06 98 98 95 53
-        </a>
+  <!-- Hero Section - Professional -->
+  <section class="pt-32 pb-20 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+    
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <div class="fade-up">
+        <div class="inline-flex items-center space-x-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-4 py-2 mb-8">
+          <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <span class="text-yellow-500 font-medium text-sm">Expert Certifié en Crochetage</span>
+        </div>
+        
+        <h1 class="professional-heading text-5xl md:text-7xl font-serif mb-8">
+          <span class="gold-text">Maître</span><br>
+          <span class="text-white">Lock Picker</span>
+        </h1>
+        
+        <p class="professional-body text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+          Spécialiste exclusif en <strong class="text-yellow-500">ouverture de serrures</strong> à Besançon.
+          <br>Techniques professionnelles de crochetage <strong class="text-yellow-500">sans aucun dégât</strong>.
+        </p>
       </div>
 
-      <!-- Quick Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-        <div class="glass p-4 rounded-lg text-center">
-          <div class="text-2xl font-bold text-green-400">< 30min</div>
-          <div class="text-sm text-gray-400">Intervention</div>
+      <!-- Professional Stats -->
+      <div class="fade-up grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
+        <div class="glass-luxury p-6 rounded-xl text-center professional-hover">
+          <div class="text-3xl font-bold text-yellow-500 mb-2">&lt; 20min</div>
+          <div class="text-sm text-gray-400 font-medium">Temps d'intervention</div>
         </div>
-        <div class="glass p-4 rounded-lg text-center">
-          <div class="text-2xl font-bold text-yellow-400">24/7</div>
-          <div class="text-sm text-gray-400">Disponible</div>
+        <div class="glass-luxury p-6 rounded-xl text-center professional-hover">
+          <div class="text-3xl font-bold text-green-400 mb-2">100%</div>
+          <div class="text-sm text-gray-400 font-medium">Sans dégâts</div>
         </div>
-        <div class="glass p-4 rounded-lg text-center">
-          <div class="text-2xl font-bold text-blue-400">0%</div>
-          <div class="text-sm text-gray-400">Dégâts</div>
+        <div class="glass-luxury p-6 rounded-xl text-center professional-hover">
+          <div class="text-3xl font-bold text-yellow-500 mb-2">24/7</div>
+          <div class="text-sm text-gray-400 font-medium">Disponibilité</div>
         </div>
-        <div class="glass p-4 rounded-lg text-center">
-          <div class="text-2xl font-bold text-purple-400">Expert</div>
-          <div class="text-sm text-gray-400">Crochetage</div>
+        <div class="glass-luxury p-6 rounded-xl text-center professional-hover">
+          <div class="text-3xl font-bold text-white mb-2">500+</div>
+          <div class="text-sm text-gray-400 font-medium">Interventions</div>
+        </div>
+      </div>
+
+      <!-- Premium CTA -->
+      <div class="fade-up space-y-6">
+        <a href="tel:0698989553" 
+           class="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-5 px-10 rounded-xl text-xl shadow-2xl hover:shadow-red-500/25 transition-all duration-300 transform hover:scale-105 elegant-pulse">
+          <svg class="w-6 h-6 inline-block mr-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+          </svg>
+          URGENCE - 06 98 98 95 53
+        </a>
+        
+        <div class="text-sm text-gray-400">
+          <p>✓ Devis gratuit par téléphone</p>
+          <p>✓ Intervention garantie sans dégâts</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Mon Expertise</h2>
-      
+  <!-- Expertise Section -->
+  <section id="expertise" class="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold gold-text mb-6">Mon Expertise</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto professional-body">
+          Spécialisé exclusivement dans l'art du crochetage professionnel. 
+          Chaque intervention est réalisée avec précision et respect de votre matériel.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🚪</div>
-          <h3 class="text-xl font-bold text-white mb-3">Porte Claquée</h3>
-          <p class="text-gray-300">Ouverture rapide sans endommager votre serrure. Technique de crochetage professionnel.</p>
+        <div class="glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 text-center">Porte Résidentielle</h3>
+          <p class="text-gray-300 text-center professional-body">
+            Ouverture experte de toutes serrures domestiques. Techniques de crochetage adaptées à chaque mécanisme.
+          </p>
         </div>
 
-        <!-- Service 2 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🔐</div>
-          <h3 class="text-xl font-bold text-white mb-3">Serrure Bloquée</h3>
-          <p class="text-gray-300">Déblocage de serrures grippées ou défectueuses. Manipulation experte sans destruction.</p>
+        <div class="glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 text-center">Serrures Haute Sécurité</h3>
+          <p class="text-gray-300 text-center professional-body">
+            Manipulation experte des serrures complexes. Formation continue sur les dernières technologies.
+          </p>
         </div>
 
-        <!-- Service 3 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🗝️</div>
-          <h3 class="text-xl font-bold text-white mb-3">Clé Perdue</h3>
-          <p class="text-gray-300">Accès retrouvé même sans clé. Techniques avancées de lock picking.</p>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🔓</div>
-          <h3 class="text-xl font-bold text-white mb-3">Cadenas</h3>
-          <p class="text-gray-300">Ouverture de cadenas, antivols vélo, boîtes aux lettres bloquées.</p>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🏢</div>
-          <h3 class="text-xl font-bold text-white mb-3">Bureaux</h3>
-          <p class="text-gray-300">Intervention sur site professionnel. Discrétion et efficacité garanties.</p>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="glass p-6 rounded-xl card-hover">
-          <div class="text-4xl mb-4">🚗</div>
-          <h3 class="text-xl font-bold text-white mb-3">Véhicules</h3>
-          <p class="text-gray-300">Ouverture de portières de voiture. Clés oubliées à l'intérieur.</p>
+        <div class="glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 7h-1V6a6 6 0 0 0-12 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM8 6a4 4 0 0 1 8 0v1H8V6zm4 9a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4 text-center">Cadenas & Antivols</h3>
+          <p class="text-gray-300 text-center professional-body">
+            Ouverture professionnelle de tous types de cadenas et systèmes antivols bloqués.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Process Section -->
-  <section id="process" class="py-16 px-4 bg-slate-800/50">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Comment ça marche ?</h2>
-      
+  <section id="process" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold gold-text mb-6">Processus Professionnel</h2>
+        <p class="text-xl text-gray-300 professional-body">
+          Une approche méthodique pour chaque intervention, garantissant efficacité et préservation de votre matériel.
+        </p>
+      </div>
+
       <div class="space-y-8">
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold">1</span>
+        <div class="flex items-start space-x-6 glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl font-bold text-black">1</span>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">📞 Vous m'appelez</h3>
-            <p class="text-gray-300">Décrivez votre situation. Je vous donne une estimation immédiate.</p>
+            <h3 class="text-2xl font-semibold text-white mb-3">Analyse Préliminaire</h3>
+            <p class="text-gray-300 professional-body text-lg">
+              Évaluation téléphonique de votre situation. Estimation précise du temps et du coût d'intervention.
+            </p>
           </div>
         </div>
 
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold">2</span>
+        <div class="flex items-start space-x-6 glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl font-bold text-black">2</span>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">🚗 J'arrive chez vous</h3>
-            <p class="text-gray-300">Intervention rapide avec tout le matériel nécessaire.</p>
+            <h3 class="text-2xl font-semibold text-white mb-3">Intervention Rapide</h3>
+            <p class="text-gray-300 professional-body text-lg">
+              Déplacement immédiat avec l'équipement professionnel adapté à votre type de serrure.
+            </p>
           </div>
         </div>
 
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold">3</span>
+        <div class="flex items-start space-x-6 glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl font-bold text-black">3</span>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">🔓 Ouverture experte</h3>
-            <p class="text-gray-300">Crochetage professionnel sans endommager votre serrure.</p>
+            <h3 class="text-2xl font-semibold text-white mb-3">Crochetage Expert</h3>
+            <p class="text-gray-300 professional-body text-lg">
+              Manipulation précise et non-destructive. Préservation totale de l'intégrité de votre serrure.
+            </p>
           </div>
         </div>
 
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold">4</span>
+        <div class="flex items-start space-x-6 glass-luxury p-8 rounded-2xl professional-hover fade-up">
+          <div class="w-16 h-16 gold-accent rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl font-bold text-black">4</span>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">✅ Mission accomplie</h3>
-            <p class="text-gray-300">Votre porte est ouverte, votre serrure fonctionne parfaitement.</p>
+            <h3 class="text-2xl font-semibold text-white mb-3">Vérification & Conseils</h3>
+            <p class="text-gray-300 professional-body text-lg">
+              Test de fonctionnement complet et conseils personnalisés pour éviter les récidives.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Me Section -->
-  <section class="py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-yellow-400 mb-8">Pourquoi faire appel à moi ?</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass p-6 rounded-xl">
-          <h3 class="text-xl font-bold text-white mb-3">🎯 Spécialiste Exclusif</h3>
-          <p class="text-gray-300">Je ne fais QUE de l'ouverture. C'est mon expertise, ma passion, ma spécialité.</p>
-        </div>
-
-        <div class="glass p-6 rounded-xl">
-          <h3 class="text-xl font-bold text-white mb-3">🛡️ Sans Dégâts</h3>
-          <p class="text-gray-300">Techniques non-destructives. Votre serrure reste intacte et fonctionnelle.</p>
-        </div>
-
-        <div class="glass p-6 rounded-xl">
-          <h3 class="text-xl font-bold text-white mb-3">⚡ Rapide</h3>
-          <p class="text-gray-300">Intervention d'urgence. J'arrive rapidement avec tous mes outils.</p>
-        </div>
-
-        <div class="glass p-6 rounded-xl">
-          <h3 class="text-xl font-bold text-white mb-3">💰 Prix Honnête</h3>
-          <p class="text-gray-300">Tarif annoncé au téléphone. Pas de surprise, pas de frais cachés.</p>
-        </div>
+  <!-- Premium Subscription -->
+  <section class="py-24 px-6 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/5 via-transparent to-yellow-500/5"></div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="fade-up mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold gold-text mb-6">Protection Premium</h2>
+        <p class="text-xl text-gray-300 professional-body max-w-3xl mx-auto">
+          Sécurisez votre tranquillité avec notre service de protection professionnelle. 
+          Intervention prioritaire garantie 24h/24.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Protection Subscription Section -->
-  <section class="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-5xl font-bold text-yellow-400 mb-6">🛡️ Abonnement Protection</h2>
-      <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-        Protégez votre foyer et soyez tranquille 24/7 — Intervention prioritaire en cas de problème d'ouverture.
-      </p>
-      
-      <div class="relative inline-block">
-        <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
-        <div class="relative glass p-10 rounded-2xl max-w-md mx-auto transform hover:scale-105 transition-all duration-300">
-          <h3 class="text-3xl font-bold text-white mb-2">Protection Totale</h3>
-          <p class="text-yellow-400 text-5xl font-extrabold mb-8">20 €<span class="text-xl font-normal text-gray-300">/mois</span></p>
+      <div class="glass-premium p-12 rounded-3xl max-w-2xl mx-auto elegant-pulse fade-up">
+        <div class="text-center mb-10">
+          <div class="w-24 h-24 gold-accent rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            </svg>
+          </div>
+          <h3 class="text-4xl font-serif font-bold text-white mb-4">Protection Totale</h3>
+          <div class="text-7xl font-bold gold-text mb-8">
+            20<span class="text-3xl text-gray-400">€</span>
+            <div class="text-xl text-gray-400 font-normal">/mois</div>
+          </div>
+        </div>
+
+        <div class="space-y-6 mb-12">
+          <div class="flex items-center space-x-4 text-left">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
+            <span class="text-gray-200 text-lg professional-body">Intervention prioritaire 24h/24</span>
+          </div>
           
-          <ul class="text-gray-300 space-y-4 mb-10 text-left">
-            <li class="flex items-center space-x-3">
-              <span class="text-green-400 text-xl">✅</span>
-              <span>Intervention prioritaire 24/7</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <span class="text-green-400 text-xl">✅</span>
-              <span>Déblocage d'urgence incl
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-yellow-400 mb-8">Besoin d'aide ?</h2>
-      <p class="text-xl text-gray-300 mb-8">
-        Disponible 24h/24 sur Besançon et alentours
-        <br>
-        Intervention rapide pour tous vos problèmes d'ouverture
-      </p>
-      
-      <div class="space-y-4">
-        <div>
-          <a href="tel:0698989553" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl text-2xl transition">
-            📞 06 98 98 95 53
-          </a>
+          <div class="flex items-center space-x-4 text-left">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
+            <span class="text-gray-200 text-lg professional-body">Ouverture d'urgence incluse</span>
+          </div>
+          
+          <div class="flex items-center space-x-4 text-left">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
+            <span class="text-gray-200 text-lg professional-body">Support technique immédiat</span>
+          </div>
         </div>
-        
-        <div>
-          <a href="mailto:mguyout@gmail.com" class="text-yellow-400 hover:text-yellow-300 text-lg">
-            ✉️ mguyout@gmail.com
-          </a>
-        </div>
-      </div>
 
-      <div class="mt-8 text-sm text-gray-400">
-        <p>🗺️ Zone d'intervention : Besançon et communes limitrophes</p>
-        <p>⏰ Disponible tous les jours, 24h/24</p>
+        <a href="https://www.paypal.com/paypalme/eizekiels" target="_blank" 
+           class="block w-full gold-accent text-black font-bold py-5 px-8 rounded-xl text-xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105 mb-6">
+          <svg class="w-6 h-6 inline-block mr-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106z"/>
+          </svg>
+          Souscrire via PayPal
+        </a>
+
+        <p class="text-gray-400 italic text-lg">
+          Votre sécurité est notre engagement professionnel.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-gray-400 py-6 text-center">
-    <p>© 2025 Lock Picker - Spécialiste Ouverture de Portes à Besançon</p>
-  </footer>
+  <!-- Professional Contact -->
+  <section id="contact" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="fade-up">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold gold-text mb-8">Contact Expert</h2>
+        <p class="text-xl text-gray-300 professional-body mb-12">
+          Intervention d'urgence sur Besançon et communes limitrophes.
+          <br>Service professionnel disponible 24h/24, 365 jours par an.
+        </p>
+      </div>
 
-  <script>
-    // Simple scroll animations
-    window.addEventListener('scroll', () => {
-      const cards = document.querySelectorAll('.card-hover');
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }
-      });
-    });
-
-    // Initialize cards
-    document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.card-hover');
-      cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.5s ease';
-      });
-    });
-  </script>
-</body>
-</html>
+      <div class="glass-luxury p-12 rounded-3xl fade-up">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-6">Urgence 24h/24</h3>
+            <a href="tel:0698989553" 
+               class="inline-block gold-accent text-black font-bold py-4 px-8 rounded-xl text-2xl shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105 mb-6">
+              📞 06 98 98 95 53
+            </a>
+            
+            <div class="space-y-3 text-left">
+              <div class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3
